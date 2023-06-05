@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnmb0Wh2cDfrjUAKXOHooXZ0kdTMoZetY&libraries=places"></script>
+    <div id="current-location"></div>
+    <div id="map" style="width: 50%; height: 400px; justify-content: center;"></div>
+
+    <div id="options">
+        <label>
+            <input type="checkbox" name="option" value="rice"> 飯
+        </label>
+        <label>
+            <input type="checkbox" name="option" value="noodles"> 麵
+        </label>
+        <label>
+            <input type="checkbox" name="option" value="fastfood"> 速食
+        </label>
+        <label>
+            <input type="checkbox" name="option" value="snacks"> 點心
+        </label>
+        <label>
+            <input type="checkbox" name="option" value="breakfast"> 早午餐
+        </label>
+        <label>
+            <input type="checkbox" name="option" value="steak"> 牛排
+        </label>
+        <label>
+            <input type="checkbox" name="option" value="teppanyaki"> 鐵板燒
+        </label>
+        <label>
+            <input type="checkbox" name="option" value="BBQ"> 燒肉
+        </label>
+        <input type="checkbox" name="option" id="custom-checkbox" onclick="toggleCustomInput()">
+        <label for="custom-checkbox">其他</label>
+        <input type="text" id="custom-option" style="display: none;">
+    </div>
+
+    <button id="start-btn">開始搜尋</button>
+    <button id="random-btn-beforesearch">隨機選擇</button>
+    <button id="random-btn-aftersearch" style="display: none;">隨機選擇</button>
+    <button id="reset-btn" style="display: none;">重新選擇</button>
+    <ul id="restaurant-list"></ul>
+    <div id="restaurant-details"></div>
+
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

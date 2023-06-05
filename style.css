@@ -1,0 +1,19 @@
+#map-container {
+    display: flex;
+}
+
+#map {
+    height: 400px;
+    width: 70%;
+}
+
+#restaurant-list {
+    width: 30%;
+    margin-left: 20px;
+}
+
+.highlight {
+    background-color: lightblue;
+    color: white;
+    font-weight: bold;
+}
