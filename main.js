@@ -155,12 +155,15 @@ function startSearch_random() {
     service.nearbySearch(request, function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             // 隨機選取一個餐廳
-            var randomIndex = Math.floor(Math.random() * results.length);
-            var restaurant = results[randomIndex];
-            createMarker(restaurant);
-            restaurants.push(restaurant);
-            addRestaurantToList(restaurant, randomIndex);
-            selectRandomRestaurant();
+            while (1) {
+                var randomIndex = Math.floor(Math.random() * results.length);
+                var restaurant = results[randomIndex];
+                createMarker(restaurant);
+                restaurants.push(restaurant);
+                addRestaurantToList(restaurant, randomIndex);
+                selectRandomRestaurant();
+                if (restaurant.types.includes("restaurant")) { break; }
+            }
         }
     });
 
@@ -289,7 +292,7 @@ function resetSelection() {
     Array.from(document.querySelectorAll('input[name="option"]:checked')).forEach(function (checkbox) {
         checkbox.checked = false;
     });
-    
+
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(function (checkbox) {
         checkbox.disabled = false;
