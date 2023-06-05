@@ -17,3 +17,7 @@
     color: white;
     font-weight: bold;
 }
+
+#distance {
+    width: 40px; /* 设置宽度为100像素 */
+  }
