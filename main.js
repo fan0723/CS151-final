@@ -3,8 +3,8 @@ var service;
 var restaurants = [];
 var selectedRestaurant;
 var myLatLng;
-var directionsService = new google.maps.DirectionsService();
-var directionsRenderer = new google.maps.DirectionsRenderer();
+// var directionsService = new google.maps.DirectionsService();
+// var directionsRenderer = new google.maps.DirectionsRenderer();
 
 function initMap() {
 
