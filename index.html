@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnmb0Wh2cDfrjUAKXOHooXZ0kdTMoZetY&libraries=places"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnmb0Wh2cDfrjUAKXOHooXZ0kdTMoZetY&libraries=places"></script> -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnmb0Wh2cDfrjUAKXOHooXZ0kdTMoZetY&callback=initMap&libraries=places"></script>
     <div id="current-location"></div>
     <div id="map" style="width: 50%; height: 400px; justify-content: center;"></div>
 
@@ -54,7 +54,6 @@
     <button id="reset-btn" style="display: none;">重新選擇</button>
     <ul id="restaurant-list"></ul>
     <div id="restaurant-details"></div>
-
 
     <script src="https://unpkg.com/jquery"></script>
     <script src="main.js"></script>
